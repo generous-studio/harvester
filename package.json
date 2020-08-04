@@ -1,6 +1,6 @@
 {
   "name": "generous-harvester",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Utility to log on harverst what you've been up to, so you dont forget your timers",
   "main": "index.js",
   "repository": "git@github.com:generous-studio/harvester.git",
