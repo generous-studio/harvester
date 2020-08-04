@@ -20,9 +20,11 @@ yargs
   .example('$0 --time=8.0', 'The harvest time to log, (decimals)')
   .demandOption(['project', 'task'])
 
-const argv = yargs.argv;
+const { argv } = yargs;
 dotenvExpand(dotenv.config({ path: './scripts/.env' }));
-const { USER, HARVEST_TOKEN, HARVEST_USER, HARVEST_ENABLE } = process.env;
+const {
+  USER, HARVEST_TOKEN, HARVEST_USER, HARVEST_ENABLE,
+} = process.env;
 const JIRA_PREFIX = argv.jira;
 const TASK = argv.task;
 const PROJECT = argv.project;
@@ -35,12 +37,8 @@ const logPath = './harvest.log';
 const lastUpdate = fs.existsSync(logPath) && fs.readFileSync(logPath, 'utf8');
 
 (async () => {
-  const [_branch, _commit] = await Promise.all([
-    exec('git rev-parse --abbrev-ref HEAD'),
-    exec(`git show-branch --no-name ${branch}`),
-  ])
-  const { stdout: branch } = _branch;
-  const { stdout: latestCommit } = _commit;
+  const { stdout: branch } = await exec('git rev-parse --abbrev-ref HEAD');
+  const { stdout: latestCommit } = await exec(`git show-branch --no-name ${branch}`);
   const [nature, ticket] = branch.split('/');
   const Ticket = (ticket && ticket.includes(`${JIRA_PREFIX}-`) && ticket) || '';
 
