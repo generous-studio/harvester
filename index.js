@@ -32,6 +32,19 @@ const TIME = argv.time
 
 if (!HARVEST_ENABLE) { process.exitCode = 0; return; }
 
+const REQUIRED_ENV_VARS = [
+  'HARVEST_TOKEN',
+  'HARVEST_USER',
+];
+
+REQUIRED_ENV_VARS.forEach(env => {
+  if (!process.env[env] || !process.env[env].length) {
+    console.error(`Missing environment variable. ${env} is required.`);
+
+    return process.exit(1);
+  }
+});
+
 const logPath = './harvest.log';
 
 const lastUpdate = fs.existsSync(logPath) && fs.readFileSync(logPath, 'utf8');
