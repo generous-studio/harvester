@@ -16,6 +16,8 @@ HARVEST_USER=
 ```
 
 # Usage
+#### Local installation, by project:
+- Install `yarn add -D generous-harvester` | `npm i -D generous-harvester`
 in `package.json`
 ```json
 {
@@ -25,6 +27,16 @@ in `package.json`
   }
 }
 ```
+
+#### Global installation, by project:
+- Install `yarn global add generous-harvester` | `npm i -g generous-harvester`
+- export the env vars on your shell _(.zshrc|.bashrc..)_
+```sh
+export HARVEST_ENABLE=true
+export HARVEST_USER=# YOUR_USER #
+export HARVEST_TOKEN=# YOUR_TOKEN #
+```
+- then run `harvest --project=### --task=### --jira PRJ`
 
 ## Tips
 - Follow branch naming convetions for optimal result: `{task}/{Ticket}/branch-name`
