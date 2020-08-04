@@ -1,4 +1,4 @@
-# Harverster
+# Harvester
 Utility to log on harverst what you've been up to, so you dont forget your timers
 
 Automatically log to Harvest when run `yarn harvest`;<br/>
@@ -14,7 +14,6 @@ HARVEST_TOKEN=
 # required (if HARVEST_ENABLE=true)
 HARVEST_USER=
 ```
-
 
 # Usage
 in `package.json`
