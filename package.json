@@ -1,0 +1,23 @@
+{
+  "name": "generous-harverster",
+  "version": "0.1.0",
+  "description": "Utility to log on harverst what you've been up to, so you dont forget your timers",
+  "main": "index.js",
+  "repository": "git@github.com:generous-studio/harverster.git",
+  "author": {
+    "name": "Christhopher Lion",
+    "email": "christhopherlion@icloud.com",
+    "url": "https://lion.alia.ml/"
+  },
+  "license": "MIT",
+  "private": false,
+  "bin": {
+    "harvest": "./index.js"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "dotenv-expand": "^5.1.0",
+    "yargs": "^15.4.1"
+  }
+}
