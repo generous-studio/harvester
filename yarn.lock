@@ -48,10 +48,17 @@ color-name@~1.1.4:
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
 
-dotenv-expand@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/dotenv-expand/-/dotenv-expand-5.1.0.tgz#3fbaf020bfd794884072ea26b1e9791d45a629f0"
-  integrity sha512-YXQl1DSa4/PQyRfgrv6aoNjhasp/p4qs9FjJ4q4cQk+8m4r6k4ZSiEyytKG8f8W9gi8WsQtIObNmKd+tMzNTmA==
+dotenv-expand@^11.0.0:
+  version "11.0.2"
+  resolved "https://registry.yarnpkg.com/dotenv-expand/-/dotenv-expand-11.0.2.tgz#20e90b9966a794cf42bcecb2454ad5fe6a239771"
+  integrity sha512-G4mKf8gvpPmuFaXowAL/oN8sxKViyIMH6HYt1SDRK8N/mVl+WnTIZqS0PK1L94jnS6WDUy3uMgPym+ZxsZIPIA==
+  dependencies:
+    dotenv "^16.4.1"
+
+dotenv@^16.4.1:
+  version "16.4.2"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.4.2.tgz#7ca798f89ae2011846bbdbf6470785307754120d"
+  integrity sha512-rZSSFxke7d9nYQ5NeMIwp5PP+f8wXgKNljpOb7KtH6SKW1cEqcXAz9VSJYVLKe7Jhup/gUYOkaeSVyK8GJ+nBg==
 
 dotenv@^8.2.0:
   version "8.2.0"
